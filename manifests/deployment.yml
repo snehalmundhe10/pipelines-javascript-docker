@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: snehalmundhepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: snehalmundhepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: snehalmundhepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: snehalmundhepipelinesjavascriptdocker 
+          image: demo2containerregistry.azurecr.io/snehalmundhepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
